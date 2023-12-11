@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 
 from datetime import datetime, timezone, timedelta
 from sys import argv
@@ -13,13 +13,16 @@ if len(argv) == 3:
 
 program = open(f'day{day:0>2}.py', 'w')
 
-program.write(f'''f = open('input/day{day:0>2}.txt')
+program.write(f'''import re
+
+f = open('input/day{day:0>2}.txt')
 lines = [line.rstrip() for line in f.readlines()]
               
 part1 = 0
 part2 = 0
 
 for line in lines:
+    ints = [int(i) for i in re.findall(r'-?\\d+', line)]
     print(line)
 
 print(f'part 1: {{part1}}')

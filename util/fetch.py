@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/local/bin/python3
 
 from datetime import datetime, timezone, timedelta
 from sys import argv
