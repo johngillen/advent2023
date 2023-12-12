@@ -131,3 +131,6 @@ dmypy.json
 # aoc utils
 throttle.txt
 cookie.txt
+
+# im bored ok
+auth.txt
